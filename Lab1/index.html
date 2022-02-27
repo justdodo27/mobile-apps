@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="item">
+            <h3></h3>
+        </div>
+        <div class="item">
+            <h4></h4>
+        </div>
+        <div class="item"></div>
+        <div class="item">
+            <marquee behavior="alternate" scrollamount="10" direction="">
+                <marquee id="logo" behavior="alternate" scrollamount="10" direction="down">
+                    <img src="https://images.vectorhq.com/images/previews/72c/logo-dvd-video-psd-440086.png" alt="DVD LOGO" height="" width="100">
+                </marquee>
+            </marquee>
+        </div>
+        <div class="item">
+            
+        </div>
+    </div>
+
+    <script>
+        const h3 = document.querySelector("h3")
+        const h4 = document.querySelector("h4")
+        const marquee = document.querySelectorAll("marquee")
+
+
+        function reportWindowWidth(){
+            h3.textContent = "Width: "+ window.innerWidth + "px"
+            h4.textContent = "Height: " + window.innerHeight + "px"
+        }
+
+        reportWindowWidth()
+
+        window.onresize = reportWindowWidth
+    </script>
+</body>
+</html>
